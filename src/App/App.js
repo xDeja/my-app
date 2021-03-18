@@ -1,6 +1,11 @@
 import "./App.css";
+import { useWindowDimensions } from "useWindowDimensions";
 import { Button } from "@material-ui/core";
 
+
+const Component = () => {
+  const {height, width} = useWindowDimensions();
+}
 function App() {
   return (
     <div>
@@ -8,8 +13,8 @@ function App() {
       <Button
         variant="contained"
         style={{
-          width: "50%",
-          height: "30%",
+          width: width/2,
+          height: height/2,
           justifyContent: "center",
           alignItems: "center"
         }}

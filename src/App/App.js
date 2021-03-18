@@ -28,6 +28,7 @@ function App() {
         variant="contained"
         style={{
           position: "absolute",
+          color: "black",
           bottom: height / 1.5,
           left: width / 2
         }}

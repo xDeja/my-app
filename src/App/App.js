@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Button } from "@material-ui/core";
 
 function App() {
   return (
-    <div>Hello World
-      <btn>Hello Click Me!</btn>
+    <div>
+      Hello World
+      <Button variant="contained">Click me!</Button>
     </div>
   );
 }

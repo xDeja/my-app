@@ -1,27 +1,41 @@
 import "./App.css";
-import { useWindowDimensions } from './useWindowDimensions';
+import React, { useState } from "react";
 import { Button } from "@material-ui/core";
+import useWindowSize  from '../App/useWindowDimensions'
 
 
-const Component = () => {
-  const {height, width} = useWindowDimensions();
-}
+
+
 function App() {
+  const [width, height] = useWindowSize();
+  const [name, setName] = useState("Hello World");
+
+  const changeName = () => {
+    setName("Hi, Martha!");
+  };
   return (
-    <div>
-      Hello World
+    <box>
+      <div
+        style={{
+          position: "absolute",
+          bottom: height / 2 - 5,
+          left: width / 2 - 10
+        }}
+      >
+        {name}
+      </div>
       <Button
         variant="contained"
         style={{
-          width: width/2,
-          height: height/2,
-          justifyContent: "center",
-          alignItems: "center"
+          position: "absolute",
+          bottom: height / 1.5,
+          left: width / 2
         }}
+        onClick={changeName}
       >
-        Just to be sure!
+        uh
       </Button>
-    </div>
+    </box>
   );
 }
 

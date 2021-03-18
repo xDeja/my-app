@@ -1,5 +1,5 @@
 import "./App.css";
-import { useWindowDimensions } from "/useWindowDimensions.js";
+import { useWindowDimensions } from './useWindowDimensions';
 import { Button } from "@material-ui/core";
 
 

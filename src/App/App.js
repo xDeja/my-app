@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import { Button } from "@material-ui/core";
-import useWindowSize  from '../App/useWindowDimensions'
+import useWindowSize from '../App/useWindowDimensions'
 
 
 
@@ -11,7 +11,7 @@ function App() {
   const [name, setName] = useState("Hello World");
 
   const changeName = () => {
-    setName("Hi, Martha!");
+    setName("Hi, Alex!");
   };
   return (
     <box>

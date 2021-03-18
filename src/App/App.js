@@ -5,7 +5,9 @@ function App() {
   return (
     <div>
       Hello World
-      <Button variant="contained">Click me!</Button>
+      <Button variant="contained" style={{ justifyContent: "center" }}>
+        Click me!
+      </Button>
     </div>
   );
 }

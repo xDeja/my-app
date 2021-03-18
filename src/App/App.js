@@ -8,7 +8,7 @@ function App() {
       <Button
         variant="contained"
         style={{
-          width: "100%",
+          width: "50%",
           height: "30%",
           justifyContent: "center",
           alignItems: "center"

@@ -11,7 +11,7 @@ function App() {
   const [name, setName] = useState("Hello World");
 
   const changeName = () => {
-    setName(name => "Hi, Alex!");
+    setName("Hi, Alex!");
   };
 
   const theme = createMuiTheme({

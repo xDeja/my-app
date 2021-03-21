@@ -66,29 +66,27 @@ function App() {
   return (
     <Stage width={width} height={height}>
       <Layer>
-        <Text text="Try to drag a star" />
+        <Text text="Try to drag a star"
+        />
         {stars.map(star => (
           <Circle
             key={star.id}
             id={star.id}
             x={star.x}
             y={star.y}
-            fill={star.fill}
-            radius={10}
-            //numPoints={5}
-            height={star.height}
-            width={star.width}
+            fill={"gray"}
+            radius={20}
             opacity={0.8}
+            stroke="red"
             draggable
             //rotation={star.rotation}
-            stroke={'red'}
             shadowColor="blue"
             shadowBlur={10}
             shadowOpacity={0.6}
             shadowOffsetX={star.isDragging ? 10 : 5}
             shadowOffsetY={star.isDragging ? 10 : 5}
-            scaleX={star.isDragging ? 1.2 : 1}
-            scaleY={star.isDragging ? 1.2 : 1}
+            //scaleX={star.isDragging ? 1.2 : 1}
+            //scaleY={star.isDragging ? 1.2 : 1}
             onDragStart={handleDragStart}
             onDragEnd={handleDragEnd}
           />

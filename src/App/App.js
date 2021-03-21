@@ -82,6 +82,7 @@ function App() {
             opacity={0.8}
             draggable
             //rotation={star.rotation}
+            stroke={'red'}
             shadowColor="blue"
             shadowBlur={10}
             shadowOpacity={0.6}

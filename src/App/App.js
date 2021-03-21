@@ -78,7 +78,6 @@ function App() {
             //numPoints={5}
             height={star.height}
             width={star.width}
-            fill="#89b717"
             opacity={0.8}
             draggable
             //rotation={star.rotation}

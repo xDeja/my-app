@@ -6,20 +6,17 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { grey, purple, green, red } from "@material-ui/core/colors/";
 import useWindowSize from "../App/useWindowDimensions";
 
-function generateShapes() {
+function GenerateShapes() {
   return [...Array(10)].map((_, i) => ({
     id: i.toString(),
     x: Math.random() * window.innerWidth,
     y: Math.random() * window.innerHeight,
-    rotation: Math.random() * 180,
-    width : 10,
-    height : 10,
-    fill: 'red',
-    isDragging: false
+    fill: "red",
+    isDragging: false,
   }));
 }
 
-const INITIAL_STATE = generateShapes();
+const INITIAL_STATE = GenerateShapes();
 
 function App() {
   const [width, height] = useWindowSize();
@@ -28,36 +25,36 @@ function App() {
   const theme = createMuiTheme({
     palette: {
       primary: {
-        main: grey[900]
+        main: grey[900],
       },
       secondary: {
-        main: red[700]
+        main: red[700],
       },
       error: {
-        main: red[900]
-      }
-    }
+        main: red[900],
+      },
+    },
   });
 
   const [stars, setStars] = React.useState(INITIAL_STATE);
 
-  const handleDragStart = e => {
+  const handleDragStart = (e) => {
     const id = e.target.id();
     setStars(
-      stars.map(star => {
+      stars.map((star) => {
         return {
           ...star,
-          isDragging: star.id === id
+          isDragging: star.id === id,
         };
       })
     );
   };
-  const handleDragEnd = e => {
+  const handleDragEnd = (e) => {
     setStars(
-      stars.map(star => {
+      stars.map((star) => {
         return {
           ...star,
-          isDragging: false
+          isDragging: false,
         };
       })
     );
@@ -66,27 +63,24 @@ function App() {
   return (
     <Stage width={width} height={height}>
       <Layer>
-        <Text text="Try to drag a star"
-        />
-        {stars.map(star => (
+        <Text text="Try to drag a star" fontSize={20} fill="white" />
+        {stars.map((star) => (
           <Circle
             key={star.id}
             id={star.id}
             x={star.x}
             y={star.y}
-            fill={"gray"}
             radius={20}
+            fill={star.fill}
             opacity={0.8}
-            stroke="red"
             draggable
-            //rotation={star.rotation}
-            shadowColor="blue"
+            shadowColor="gray"
             shadowBlur={10}
             shadowOpacity={0.6}
             shadowOffsetX={star.isDragging ? 10 : 5}
             shadowOffsetY={star.isDragging ? 10 : 5}
-            //scaleX={star.isDragging ? 1.2 : 1}
-            //scaleY={star.isDragging ? 1.2 : 1}
+            scaleX={star.isDragging ? 1.2 : 1}
+            scaleY={star.isDragging ? 1.2 : 1}
             onDragStart={handleDragStart}
             onDragEnd={handleDragEnd}
           />

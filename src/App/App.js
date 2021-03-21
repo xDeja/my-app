@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import { Button } from "@material-ui/core";
-import { Stage, Layer, Star, Text } from "react-konva";
+import { Stage, Layer, Star, Circle, Text } from "react-konva";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { grey, purple, green, red } from "@material-ui/core/colors/";
 import useWindowSize from "../App/useWindowDimensions";

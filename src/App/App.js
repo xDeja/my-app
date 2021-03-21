@@ -12,6 +12,9 @@ function generateShapes() {
     x: Math.random() * window.innerWidth,
     y: Math.random() * window.innerHeight,
     rotation: Math.random() * 180,
+    width : 10,
+    height : 10,
+    fill: 'red',
     isDragging: false
   }));
 }
@@ -70,14 +73,16 @@ function App() {
             id={star.id}
             x={star.x}
             y={star.y}
+            fill={star.fill}
+            radius={10}
             //numPoints={5}
-            innerRadius={20}
-            outerRadius={40}
+            height={star.height}
+            width={star.width}
             fill="#89b717"
             opacity={0.8}
             draggable
-            rotation={star.rotation}
-            shadowColor="black"
+            //rotation={star.rotation}
+            shadowColor="blue"
             shadowBlur={10}
             shadowOpacity={0.6}
             shadowOffsetX={star.isDragging ? 10 : 5}

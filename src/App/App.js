@@ -68,8 +68,8 @@ function App() {
           <Circle
             key={star.id}
             id={star.id}
-            x={star.x + width}
-            y={star.y + height}
+            x={star.x + 1/width}
+            y={star.y + 1/height}
             radius={20}
             fill={star.fill}
             opacity={0.8}

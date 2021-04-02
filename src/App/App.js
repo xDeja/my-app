@@ -63,7 +63,7 @@ function App() {
   return (
     <Stage width={width} height={height}>
       <Layer>
-        <Text text="Try to drag a star" fontSize={20} fill="white" x={width/2}/>
+        <Text text="Try to drag a star" fontSize={20} fill="red" x={width/2}/>
         {stars.map((star) => (
           <Circle
             key={star.id}
